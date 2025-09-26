@@ -51,7 +51,9 @@ Use indexing, replication,
 ### Run the Application
 
 ```bash
-git clone https://github.com/your-username/wmg.git
-cd mvn
+git clone https://github.com/mdraselahm/wmg.git
+cd wmg
 mvn clean install
 mvn spring-boot:run
+
+curl -X POST http://localhost:8080/api/weather/metrics -H "Content-Type: application/json" -d '{"sensorIds": ["dublin-sensor","galway-sensor", "sligo-sensor"],"metrics": ["temperAture" , "HUMIDITY"],"statistic": "avg","startDate": "2025-09-18T00:00:00","endDate": "2025-09-25T00:00:00"}'
