@@ -1,0 +1,17 @@
+package com.weather.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.Map;
+
+@Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class WeatherDataResponseDto {
+    private String sensorId;
+    private Map<String, Double> metrics;
+}
