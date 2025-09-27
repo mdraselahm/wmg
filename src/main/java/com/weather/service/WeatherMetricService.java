@@ -80,6 +80,15 @@ public class WeatherMetricService {
         return convertToStatistics(groupByStatistics, statistics);
     }
 
+    /**
+     * this operation can be done in database level
+     * depends on how many rows.
+     * as long our date range is max 30 days, we need to analyze real case, how many rows..if really millions of rows..kind of this, we must do this operation in database level,
+     *
+     * @param groupByStatistics
+     * @param statistics
+     * @return
+     */
     private Map<String, Double> convertToStatistics(Map<String, List<Double>> groupByStatistics, Statistics statistics) {
         final Map<String, Double> metricsStatMap = new HashMap<>();
         for (Map.Entry<String, List<Double>> entry : groupByStatistics.entrySet()) {

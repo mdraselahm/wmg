@@ -15,6 +15,13 @@ public class DublinCountySensor implements ISensor{
         return Sensor.DUBLIN_SENSOR.getSensorId();
     }
 
+    /**
+     * static dummy metric redaing as sensor data raeder
+     * real case, we will incorporate some API/port reader/listen streaming topic..something like this
+     *
+     * @param localDateTime
+     * @return
+     */
     @Override
     public MetricsDto readWeatherMetric(LocalDateTime localDateTime) {
         return MetricsDto.builder()
