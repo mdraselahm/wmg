@@ -13,6 +13,10 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+/**
+ * this class is dummy sensor data reader.
+ * here we are simple generating some dummy weather data
+ */
 @Service
 public class MetricsCollectorService {
 

@@ -13,6 +13,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+ * weather metric data read from database
+ */
 @Service
 public class WeatherMetricService {
 
